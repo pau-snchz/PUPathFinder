@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>PUPathFinder</title>
+</head>
+<body>
+    <div class="map-container"></div>
+    <div class="form-container">
+        <form action="">
+            <div class="fg-container">
+                <div class="field-group">
+                    <label for="start-point">Your Location:</label>
+                    <select name="start-point" id="start-point">
+                        <option value=""></option>
+                        <option value="main-entrance">Main Entrance</option>
+                        <option value="walkway">Walkway</option>
+                        <option value="gymnasium">Gymnasium and Sports Center</option>
+                        <option value="oval-ee-1">Track and Football Oval Entrance/Exit 1</option>
+                        <option value="oval-ee-2">Track and Football Oval Entrance/Exit 2</option>
+                        <option value="chapel">Interfaith Chapel</option>
+                        <option value="lagoon-ee-1">Lagoon Entrance/Exit 1</option>
+                        <option value="lagoon-ee-2">Lagoon Entrance/Exit 2</option>
+                        <option value="lagoon-ee-3">Lagoon Entrance/Exit 3</option>
+                        <option value="east-wing">East Wing</option>
+                        <option value="west-wing">West Wing</option>
+                        <option value="south-wing">South Wing</option>
+                        <option value="dome">Dome</option>
+                        <option value="linear-park">Linear Park</option>
+                        <option value="charlie">Charlie del Rosario Hall</option>
+                        <option value="library">Ninoy Aquino Library and Learning Resources Center</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label for="end-point">Destination:</label>
+                    <select name="end-point" id="end-point">
+                        <option value=""></option>
+                        <option value="main-entrance">Main Entrance</option>
+                        <option value="walkway">Walkway</option>
+                        <option value="gymnasium">Gymnasium and Sports Center</option>
+                        <option value="oval-ee-1">Track and Football Oval Entrance/Exit 1</option>
+                        <option value="oval-ee-2">Track and Football Oval Entrance/Exit 2</option>
+                        <option value="chapel">Interfaith Chapel</option>
+                        <option value="lagoon-ee-1">Lagoon Entrance/Exit 1</option>
+                        <option value="lagoon-ee-2">Lagoon Entrance/Exit 2</option>
+                        <option value="lagoon-ee-3">Lagoon Entrance/Exit 3</option>
+                        <option value="east-wing">East Wing</option>
+                        <option value="west-wing">West Wing</option>
+                        <option value="south-wing">South Wing</option>
+                        <option value="dome">Dome</option>
+                        <option value="linear-park">Linear Park</option>
+                        <option value="charlie">Charlie del Rosario Hall</option>
+                        <option value="library">Ninoy Aquino Library and Learning Resources Center</option>
+                    </select>
+                </div>
+            </div>
+            <button class="calculate-btn" id="calculate-btn">Calculate</button>
+            <div class="result-container">
+                <label for="result">Result:</label>
+                <input type="text" name="result" id="result" readonly>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
