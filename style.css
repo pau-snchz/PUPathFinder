@@ -8,12 +8,18 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);   
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .map-container {
     width: 500px;
-    height: 300px;
+    height: 500px;
     background: pink;
     margin: 0 auto;
 }
@@ -23,13 +29,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 500px;
 }
 
 .fg-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    width: 950px;
+    height: 150px;
     margin: 25px 0;
 }
 
@@ -65,10 +72,10 @@ form .calculate-btn:hover {
 
 .result-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 950px;
+    width: 450px;
     margin: 25px 0;
     font-family: Poppins;
 }
@@ -77,7 +84,7 @@ form .calculate-btn:hover {
     font-family: Poppins;
     font-size: 15px;
     padding: 5px 0;
-    width: 850px;
+    width: 450px;
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0, 0.2);
 }
