@@ -5,86 +5,51 @@
 
 body {
     font-family: Poppins;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);   
 }
 
-.container {
+.navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.map-container {
-    width: 500px;
-    height: 500px;
-    background: pink;
-    margin: 0 auto;
-}
-
-.form-container form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-}
-
-.fg-container {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    height: 150px;
-    margin: 25px 0;
+    padding: 15px 100px;
 }
 
-.field-group {
+.navbar .title-logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+
+.navbar .title-logo h1 {
+    color: #880015;
+    /* text-shadow: 2px 2px #f8c107; */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 450px;
 }
 
-.field-group select {
-    font-family: Poppins;
-    font-size: 15px;
-    padding: 5px 0;
+.navbar ul li a {
+    padding: 10px 25px;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
     border-radius: 10px;
-    border: 1px solid rgb(0, 0, 0, 0.2);
 }
 
-form .calculate-btn {
-    font-family: Poppins;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 10px 0;
-    width: 150px;   
-    background: #006fbe; 
+.navbar .dijkstra-page {
     color: #ffffff;
-    border-radius: 10px;
-    border: 0;
+    background: #880015;
 }
 
-form .calculate-btn:hover {
-    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+.navbar .home-page:hover{
+    background: #f8c00783;
 }
 
-.result-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 450px;
-    margin: 25px 0;
-    font-family: Poppins;
-}
-
-.result-container input {
-    font-family: Poppins;
-    font-size: 15px;
-    padding: 5px 0;
-    width: 450px;
-    border-radius: 10px;
-    border: 1px solid rgb(0, 0, 0, 0.2);
+.navbar .dijkstra-page:hover {
+    box-shadow: 3px 3px #f8c107;
 }
