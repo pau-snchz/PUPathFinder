@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url('images/pup-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Poppins;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 25px;
+    width: 1000px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+#map {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background: pink;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+}
+
+.fg-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    margin: 25px 0;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.field-group select {
+    font-family: Poppins;
+    font-size: 15px;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+form .calculate-btn {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0;
+    width: 150px;   
+    background: #006fbe; 
+    color: #ffffff;
+    border-radius: 10px;
+    border: 0;
+}
+
+form .calculate-btn:hover {
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.2);
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    margin: 25px 0;
+    font-family: Poppins;
+}
+
+.result-container #result {
+    font-family: Poppins;
+    font-size: 15px;
+    padding: 5px 0;
+    width: 450px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    resize: none;
+}
