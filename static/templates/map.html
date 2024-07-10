@@ -104,17 +104,6 @@
             resultDiv.style.display = "none";
         });
     
-        function convertDistanceToTime(distance, speed) {
-            const estimatedTime = distance / ((speed * 1000) / 60);
-    
-            const minutes = Math.floor(estimatedTime);
-            const seconds = Math.floor((estimatedTime - minutes) * 60);
-    
-            return { minutes, seconds };
-        }
-    
-        let resultDistance = 0;
-    
         // Display the route
         document.getElementById("calculate-btn").addEventListener("click", (event) => {
             event.preventDefault();
@@ -136,20 +125,6 @@
             } else {
                 document.getElementById("result").value = "0 meters";
             }
-        });
-    
-        document.getElementById("walk-btn").addEventListener("click", (event) => {
-            event.preventDefault();
-            const speed = 5.1; 
-            const estimatedTime = convertDistanceToTime(resultDistance, speed);
-            document.getElementById("speed").value = `${estimatedTime.minutes} minutes, ${estimatedTime.seconds} seconds`;
-        });
-    
-        document.getElementById("run-btn").addEventListener("click", (event) => {
-            event.preventDefault();
-            const speed = 10; 
-            const estimatedTime = convertDistanceToTime(resultDistance, speed);
-            document.getElementById("speed").value = `${estimatedTime.minutes} minutes, ${estimatedTime.seconds} seconds`;
         });
     </script>
 </body>
