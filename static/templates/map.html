@@ -97,33 +97,59 @@
     <script src="../js/leaflet-map.js"></script>
     <script>
         const resultDiv = document.getElementById("result-container");
-        resultDiv.style.display = "block"
-
+        resultDiv.style.display = "block";
+    
         document.getElementById("close-btn").addEventListener("click", (event) => {
             event.preventDefault();
-            resultDiv.style.display = "none"
+            resultDiv.style.display = "none";
         });
-
+    
+        function convertDistanceToTime(distance, speed) {
+            const estimatedTime = distance / ((speed * 1000) / 60);
+    
+            const minutes = Math.floor(estimatedTime);
+            const seconds = Math.floor((estimatedTime - minutes) * 60);
+    
+            return { minutes, seconds };
+        }
+    
+        let resultDistance = 0;
+    
         // Display the route
         document.getElementById("calculate-btn").addEventListener("click", (event) => {
             event.preventDefault();
             const start = document.getElementById("start-point").value;
             const end = document.getElementById("end-point").value;
             resultDiv.style.display = "block";
-
+    
             if (!start || !end) {
                 alert("Please input your location and destination.");
                 return;
             }
-
+    
             const result = window.Dijkstra(window.graphData.graph, start, end);
-
+            resultDistance = result.distance;
+    
             if (result.path.length > 0) {
                 window.mapData.drawRoute(result.path);
-                document.getElementById("result").value = `${result.distance.toFixed(2)} meters`;
+                document.getElementById("result").value = `${resultDistance.toFixed(2)} meters`;
             } else {
                 document.getElementById("result").value = "0 meters";
-            }            
+            }
+        });
+    
+        document.getElementById("walk-btn").addEventListener("click", (event) => {
+            event.preventDefault();
+            const speed = 5.1; 
+            const estimatedTime = convertDistanceToTime(resultDistance, speed);
+            document.getElementById("speed").value = `${estimatedTime.minutes} minutes, ${estimatedTime.seconds} seconds`;
+        });
+    
+        document.getElementById("run-btn").addEventListener("click", (event) => {
+            event.preventDefault();
+            const speed = 10; 
+            const estimatedTime = convertDistanceToTime(resultDistance, speed);
+            document.getElementById("speed").value = `${estimatedTime.minutes} minutes, ${estimatedTime.seconds} seconds`;
         });
     </script>
 </body>
