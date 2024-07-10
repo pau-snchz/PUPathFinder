@@ -118,7 +118,7 @@ body {
 .about-us-bg {
     width: 100%;
     height: 100vh;
-    background: url('images/pup-bg.png') no-repeat center center;
+    background: url('../images/pup-bg.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
